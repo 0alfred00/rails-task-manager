@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="display-4"><%= @task.title %></h1>
+  <p>
+    <% if @task.completed %>
+      <input type="checkbox" name="<%= @task.title %>" value="<%= @task.title %>" checked>
+    <% else %>
+      <input type="checkbox" name="<%= @task.title %>" value="<%= @task.title %>">
+    <% end %>
+  </p>
+  <p><%= @task.details %></p>
+  <%= link_to "Back to task overview.", tasks_path %>
+</div>
