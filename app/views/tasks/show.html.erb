@@ -8,5 +8,12 @@
     <% end %>
   </p>
   <p><%= @task.details %></p>
+  <%= link_to "Edit task", task_edit_path %>
+  <br>
+  <%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+  <br>
   <%= link_to "Back to task overview.", tasks_path %>
 </div>
